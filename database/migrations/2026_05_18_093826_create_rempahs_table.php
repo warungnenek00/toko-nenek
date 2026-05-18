@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('rempahs', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('latin');
+            $table->text('deskripsi');
+            $table->string('asal');
+            $table->string('rasa');
+            $table->string('manfaat');
+            $table->integer('harga');
+            $table->string('gambar');
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('rempahs');
+    }
+};
