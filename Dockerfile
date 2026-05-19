@@ -18,9 +18,6 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
-RUN mkdir -p database
-RUN touch database/database.sqlite
-
 EXPOSE 8080
 
 CMD php artisan serve --host=0.0.0.0 --port=$PORT
