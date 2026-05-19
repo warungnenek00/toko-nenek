@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RempahController;
 
-Route::get('/', [RempahController::class, 'index']);
+Route::get('/', function () {
+    return 'Website berhasil online 🚀';
+});
