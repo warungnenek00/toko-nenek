@@ -10,6 +10,8 @@ class RempahController extends Controller
     {
         $rempahs = Rempah::all();
 
-        return view('welcome', compact('rempahs'));
+        return view('welcome', [
+            'rempahs' => $rempahs
+        ]);
     }
 }

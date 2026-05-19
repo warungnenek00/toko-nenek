@@ -482,6 +482,8 @@ Lihat Produk
 
 <div class="grid">
 
+@if($rempahs->count())
+
 @foreach($rempahs as $r)
 
 <div class="card">
@@ -515,6 +517,14 @@ Pesan Sekarang
 </div>
 
 @endforeach
+
+@else
+
+<p style="text-align:center;">
+Belum ada data rempah.
+</p>
+
+@endif
 
 </div>
 
@@ -551,7 +561,7 @@ Pesan Produk
 
 <div class="article-card">
 
-<img src="{{ asset('images/teh rempah.jpg') }}" alt="Teh Rempah">
+<img src="{{ asset('images/' . ($r->gambar ?? 'default.jpg')) }}" width="120">
 
 <h3>Teh Rempah</h3>
 
