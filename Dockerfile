@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     sqlite3 \
     libsqlite3-dev \
-    && docker-php-ext-install pdo pdo_sqlite zip pdo_mysql
+    && docker-php-ext-install pdo pdo_mysql pdo_sqlite zip
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
@@ -15,8 +15,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN composer install
+RUN composer install --no-dev --optimize-autoloader
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=$PORT"]
+CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8080
