@@ -47,8 +47,8 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'mysql.railway.internal'),
-            'port' => env('DB_PORT', '3306'),
+            'host' => env('DB_HOST', 'autorack.proxy.rlwy.net'),
+            'port' => env('DB_PORT', '34812'),
             'database' => env('DB_DATABASE', 'railway'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
@@ -67,8 +67,8 @@ return [
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'mysql.railway.internal'),
-            'port' => env('DB_PORT', '3306'),
+            'host' => env('DB_HOST', 'autorack.proxy.rlwy.net'),
+            'port' => env('DB_PORT', '34812'),
             'database' => env('DB_DATABASE', 'railway'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
@@ -87,7 +87,7 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'mysql.railway.internal'),
+            'host' => env('DB_HOST', 'autorack.proxy.rlwy.net'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'railway'),
             'username' => env('DB_USERNAME', 'root'),
